@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fh-bench"
+version = "0.1.0"
+description = "A reproducible bench for local LLMs: what each model can and cannot be asked, measured by code on your own hardware."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "FreedzHost" }]
+dependencies = []
+keywords = ["llm", "benchmark", "local-ai", "llama.cpp", "ollama", "vllm", "openai-api", "homelab"]
+
+[project.urls]
+Homepage = "https://freedzhost.cloud"
+Repository = "https://github.com/OWNERTEST/fh-bench"
+
+[project.optional-dependencies]
+dev = ["ruff==0.16.6", "pytest>=8"]
+
+[project.scripts]
+fh-bench = "fh_bench.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["fh_bench"]
+
+[tool.ruff]
+line-length = 88

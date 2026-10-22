@@ -1,0 +1,29 @@
+# fh-bench configuration: copy to ./fh-bench.toml or ~/.config/fh-bench/config.toml.
+# Every server speaks the OpenAI chat API. Servers sharing a `group` serve the same model in
+# different ways: the first one listed gets the whole battery, the others a short one
+# (speed, tool calling, constrained JSON).
+
+# Optional: a command run once the bench is done, to put the machine back as it was.
+# after = ["systemctl", "--user", "restart", "my-usual-model"]
+
+[[server]]
+name = "llama.cpp"                 # label in the results
+base_url = "http://127.0.0.1:8080" # llama-server (also gets /infill and the server's own timings)
+group = "qwen3-8b"
+context = 32768                    # the window the server was started with (-c)
+
+[[server]]
+name = "ollama"
+base_url = "http://127.0.0.1:11434/v1"
+model = "qwen3:8b"                 # Ollama, vLLM and LiteLLM need the model name
+group = "qwen3-8b"
+context = 32768
+
+# [[server]]
+# name = "vllm"
+# base_url = "http://127.0.0.1:8000/v1"
+# model = "Qwen/Qwen3-8B"
+# context = 32768
+# vision = false
+# api_key_env = "VLLM_API_KEY"     # the NAME of an environment variable holding the token, never the token
+# load = ["my-loader", "qwen3-8b"] # optional: a command that starts or swaps the model before it is measured
