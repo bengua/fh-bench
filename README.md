@@ -1,7 +1,9 @@
 # fh-bench
 
 [![Licence : MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
-[![CI](https://github.com/OWNERTEST/fh-bench/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNERTEST/fh-bench/actions/workflows/ci.yml)
+[![CI](https://github.com/bengua/fh-bench/actions/workflows/ci.yml/badge.svg)](https://github.com/bengua/fh-bench/actions/workflows/ci.yml)
+
+**Tutoriel** : [installation pas à pas sur freedzhost.cloud](https://freedzhost.cloud/fr/model-bench.html) · [step-by-step tutorial on freedzhost.cloud (EN)](https://freedzhost.cloud/en/model-bench.html)
 
 **Mesurer ce qu'on peut vraiment demander à un modèle local — et l'afficher sur une seule carte.**
 
@@ -40,7 +42,7 @@ Autres points :
 Il faut Python 3.11 ou plus récent, et un serveur de modèles qui tourne déjà.
 
 ```sh
-git clone https://github.com/OWNERTEST/fh-bench
+git clone https://github.com/bengua/fh-bench
 cd fh-bench
 python3 -m venv .venv
 . .venv/bin/activate
@@ -136,7 +138,7 @@ generated code whose tests pass in a sandboxed interpreter, a needle found at 4k
 from an image, fill-in-the-middle, speed, and an optional agentic task), and prints a table of results.
 
 ```sh
-git clone https://github.com/OWNERTEST/fh-bench
+git clone https://github.com/bengua/fh-bench
 cd fh-bench && python3 -m venv .venv && . .venv/bin/activate && pip install -e .
 
 # any OpenAI-compatible server

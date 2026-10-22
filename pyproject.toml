@@ -15,7 +15,7 @@ keywords = ["llm", "benchmark", "local-ai", "llama.cpp", "ollama", "vllm", "open
 
 [project.urls]
 Homepage = "https://freedzhost.cloud"
-Repository = "https://github.com/OWNERTEST/fh-bench"
+Repository = "https://github.com/bengua/fh-bench"
 
 [project.optional-dependencies]
 dev = ["ruff==0.16.6", "pytest>=8"]
